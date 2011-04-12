@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>iceWS test</title>
+<meta name="keywords" content="" />
+<meta name="description" content="A test for iceWS" />
+
+<script language="javascript" src="iceWSS.js"></script>
+
+<script language="javascript" type="text/javascript">
+    var wsUri = "ws://www.yourDomainHere.com:1111/iceWSTest";
+    function init() {
+        iceWebSocket = new iceWS(wsUri);
+
+        iceWebSocket.iceF("expectedFunction", "onReturnFromExpectedFuntion", "hey", "there");
+    }
+
+    function onReturnFromExpectedFuntion(data) {
+        //data is an array of strings with values from the server
+    }
+
+window.addEventListener("load", init, false);
+
+</script>
+
+</head>
+<body>
+<h2>iceWS Test</h2>
+
+</body>
+</html>
